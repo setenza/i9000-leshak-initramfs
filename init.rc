@@ -682,3 +682,8 @@ on property:service.iptables.configure=0
 	start pcInternet_off 
 	
 #end of PCInternet share
+
+#Execute files in /etc/init.d before booting
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+   disabled
+   oneshot
