@@ -1,4 +1,3 @@
-
 on init
 
 sysclktz 0
@@ -424,6 +423,9 @@ on boot
 
     chmod 6777 /system/bin/brcm_dutMode
 # +++++++++++++++++++++++++++++++++++++++++++
+
+start sysinit
+on property:cm.filesystem.ready=1
 
     class_start default
 
